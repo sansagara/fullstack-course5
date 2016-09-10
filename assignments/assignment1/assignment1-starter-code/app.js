@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('LunchCheck', [])
-      .controller('CheckDishesController', CheckDishes);
+      .controller('LunchCheckController', CheckDishes);
 
   function CheckDishes ($scope) {
     $scope.output = "";
