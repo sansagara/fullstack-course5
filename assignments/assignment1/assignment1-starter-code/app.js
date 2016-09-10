@@ -15,14 +15,11 @@ angular.module('LunchCheck', [])
 
   function calculateOutput(string) {
     string = string.trim();
-
     if (string == "") {
       return "Please enter data first"
     }
 
     dish_list = string.split(",")
-
-
     if (dish_list.length > 3) {
       return "Too much!"
     } else {
