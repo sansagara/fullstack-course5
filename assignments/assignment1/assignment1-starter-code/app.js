@@ -8,8 +8,7 @@ angular.module('LunchCheck', [])
   $scope.dishes = "";
 
   $scope.checkIfTooMuch = function () {
-    var output = calculateOutput($scope.dishes);
-    $scope.output = output;
+    $scope.output = calculateOutput($scope.dishes);
   };
 
 
@@ -19,7 +18,7 @@ angular.module('LunchCheck', [])
       return "Please enter data first"
     }
 
-    dish_list = string.split(",")
+    var dish_list = string.split(",")
     if (dish_list.length > 3) {
       return "Too much!"
     } else {
