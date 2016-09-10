@@ -13,7 +13,7 @@ angular.module('LunchCheck', [])
   };
 
 
-  function calculatNumericForString(string) {
+  function calculateOutput(string) {
     string = string.trim();
 
     if (string == "") {
@@ -21,13 +21,14 @@ angular.module('LunchCheck', [])
     }
 
     dish_list = string.split(",")
+
+
     if (dish_list.length > 3) {
       return "Too much!"
     } else {
       return "Enjoy!"
     }
 
-    return totalStringValue;
   }
 
 });
