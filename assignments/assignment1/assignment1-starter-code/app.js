@@ -1,16 +1,18 @@
 (function () {
-'use strict';
+  'use strict';
 
-angular.module('LunchCheck', [])
+  angular.module('LunchCheck', [])
+      .controller('CheckDishesController', CheckDishes);
 
-.controller('CheckDishesController', function ($scope) {
-  $scope.output = "";
-  $scope.dishes = "";
+  function CheckDishes ($scope) {
+    $scope.output = "";
+    $scope.dishes = "";
 
-  $scope.checkIfTooMuch = function () {
-    $scope.output = calculateOutput($scope.dishes);
-  };
+    $scope.checkIfTooMuch = function () {
+      $scope.output = calculateOutput($scope.dishes);
+    };
 
+  }
 
   function calculateOutput(string) {
     string = string.trim();
@@ -24,9 +26,6 @@ angular.module('LunchCheck', [])
     } else {
       return "Enjoy!"
     }
-
   }
-
-});
 
 })();
