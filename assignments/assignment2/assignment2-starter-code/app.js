@@ -65,6 +65,10 @@
           {
             itemName: "Chocolate",
             itemQuantity: "5"
+          },
+          {
+            itemName: "CheesyPuffs",
+            itemQuantity: "10"
           }
         ];
         var bought = [];
