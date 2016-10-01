@@ -25,6 +25,10 @@
         <div>
         <found-items found-items="narrow.found" on-remove="narrow.removeItem(index)"></found-items>
         </div>
+
+       <div ng-if="narrow.message && narrow.found.length === 0">
+           <div class="alert alert-warning">{{ narrow.message }}</div>
+       </div>
   </div>
 
 </body>
